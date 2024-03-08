@@ -1,2 +1,2 @@
 # About me
-Hi! My name is Phuoc. I am strong desire to Coding Theory and Cryptography.
+Hi! My name is Phuoc. I am an enthusiastic Coding Theorist and Cryptographer.
