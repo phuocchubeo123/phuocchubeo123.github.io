@@ -11,3 +11,7 @@ I have a lot of them :). There are several papers and ongoing projects that I ha
 1. Van Long Phuoc Pham, Keshav Goyal, Han Mao Kiah. Sequence Reconstruction Problem for Deletion Channels: A Complete Asymptotic Solution.
 
 Since Shannon, Coding Theory has changed dramatically. Even new ways to mitigate errors have been proposed. Notable was the Sequence Reconstruction Problem by Levenshtein.
+
+2. Johan Chrisnata, Han Mao Kiah, Van Long Phuoc Pham. Deletion Correcting Codes for Efficient DNA Synthesis
+
+We are interested in constrained code.
