@@ -1,0 +1,1 @@
+Since Shannon, Coding Theory has changed dramatically. Even new ways to mitigate errors have been proposed. Notable was the Sequence Reconstruction Problem by Levenshtein.
