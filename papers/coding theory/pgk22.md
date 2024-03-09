@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # Sequence Reconstruction Problem for Deletion Channel
 
 ## Some history on Sequence Reconstruction Problem
