@@ -1,0 +1,6 @@
+baseURL = 'https://phuocchubeo123.github.io/'
+languageCode = 'en-us'
+title = 'Pham Van Long Phuoc'
+theme="phuocchubeo123"
+
+disableKinds = ['taxonomy', 'term']
