@@ -5,4 +5,4 @@ draft = false
 hideDate = true
 +++
 
-Email: phuoc_pham_van_long@brown.edu
+Email: {{< copyemail text="phuoc_pham_van_long@brown.edu" />}}

@@ -1,0 +1,29 @@
+{{/* Support both self-closing and enclosing usage by evaluating .Inner when no text param provided */}}
+{{ $text := .Get "text" | default (.Inner | plainify | trim " \n\r\t") }}
+<span class="copy-email">
+  <code class="email-text">{{ $text }}</code>
+  <button type="button" class="copy-btn" aria-label="Copy email to clipboard">Copy</button>
+  <span class="copy-status" aria-live="polite" hidden>Copied!</span>
+</span>
+<script>(function(){
+  var wrap = document.currentScript && document.currentScript.previousElementSibling;
+  if(!wrap || !wrap.classList || !wrap.classList.contains('copy-email')) return;
+  var btn = wrap.querySelector('.copy-btn');
+  var code = wrap.querySelector('.email-text');
+  var status = wrap.querySelector('.copy-status');
+  function showOK(){ if(status){ status.hidden = false; setTimeout(function(){ status.hidden = true; }, 1200); } }
+  if(btn && code){
+    btn.addEventListener('click', function(){
+      var text = (code.textContent || '').trim();
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(showOK, showOK);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try{ document.execCommand('copy'); }catch(e){}
+        document.body.removeChild(ta);
+        showOK();
+      }
+    });
+  }
+})();</script>

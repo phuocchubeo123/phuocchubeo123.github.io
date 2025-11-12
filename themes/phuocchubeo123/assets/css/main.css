@@ -129,6 +129,25 @@ li {
 	font-weight: 600; /* slightly bold */
 }
 
+.copy-email .copy-btn {
+	margin-left: 0.5rem;
+	padding: 0.1rem 0.4rem;
+	font-size: 0.85rem;
+	border: 1px solid #bbb;
+	background: #f7f7f7;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.copy-email .copy-btn:hover,
+.copy-email .copy-btn:focus {
+	background: #eee;
+}
+.copy-email .copy-status {
+	margin-left: 0.5rem;
+	font-size: 0.85rem;
+	color: #2e7d32; /* green */
+}
+
 @media screen and (max-width:990px) {
 	.about-me,.links-summary, .description {
 		flex-wrap: wrap;
