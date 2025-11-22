@@ -3,3 +3,13 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partial "head/css.html" . }}
 {{ partial "head/js.html" . }}
+{{- $gaID := site.Params.googleAnalyticsID -}}
+{{- if and $gaID (ne hugo.Environment "development") }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ $gaID }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ $gaID }}');
+</script>
+{{- end }}
