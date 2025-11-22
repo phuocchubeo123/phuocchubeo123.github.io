@@ -3,18 +3,63 @@ body {
 	background-color: #EEE;
 	font-family: "Times New Roman", Times, serif;
 	line-height: 1.5;
+	margin: 0; /* remove default browser margins */
 }
 
+/* Inline code style */
 code {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	background: #f5f5f5;
+	padding: 0.1em 0.3em;
+	border-radius: 3px;
 }
 
 pre {
-	paddieg: 1em;
+	padding: 0.5em;
 }
 
 main {
 	max-width: 50em;
 	margin: 0 auto;
+}
+
+/* Global link styles: blue, no underline */
+a {
+	color: #0a58ff; /* adjust to your preferred blue */
+	text-decoration: none;
+}
+a:visited {
+	color: #0a58ff; /* keep visited links the same blue */
+}
+a:hover,
+a:focus {
+	text-decoration: none; /* keep no underline on hover/focus */
+}
+
+/* Header navigation aligned with main content width */
+.site-header {
+	padding: 0.10rem 0; /* small, consistent spacing above content */
+}
+.site-header .container {
+	max-width: 50em;
+	margin: 0 auto;
+}
+.site-header nav {
+	display: flex;
+	justify-content: flex-end; /* align links with the name's left edge on the upper line */
+}
+.site-header nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 0.5rem;
+}
+.site-header nav a {
+	text-decoration: none; /* color inherits from global link styles */
+}
+.site-header nav a.active {
+	text-decoration: none;
 }
 
 .links {
@@ -24,6 +69,12 @@ main {
 .title {
 	display: flex;
 	flex-direction: column;
+	gap: 0.25rem;
+}
+
+/* Reduce the space between the nav and the name on the homepage */
+#my-name {
+	margin-top: 0; /* remove large default H1 top margin */
 }
 
 .links a {
@@ -39,13 +90,6 @@ main {
 }
 
 
-img[alt="Franklin Harding"] {
-	float: left;
-	width: 13em;
-	height: 13em;
-	margin-right: 1em
-}
-
 img {
 	max-width: 80%;
 	max-height: 25em;
@@ -58,6 +102,50 @@ img[src$='#right'] {
 
 li {
 	margin: 0.5em 0;
+}
+
+/* Paper links: push the ePrint link to the far right */
+.paper-links {
+	display: flex;
+	align-items: baseline;
+	gap: 0.75rem; /* small spacing between venue and ePrint */
+}
+.paper-links .paper-eprint {
+	margin-left: 0; /* keep ePrint on the left, next to venue */
+}
+.paper-links .paper-venue {
+	color: #d81b60; /* dark pink */
+	font-weight: 600; /* slightly bold */
+}
+.paper-links .paper-venue:visited,
+.paper-links .paper-venue:hover,
+.paper-links .paper-venue:focus {
+	color: #d81b60; /* keep same color in all states */
+}
+
+/* Journal label styling: a bit more red */
+.paper-journal {
+	color: #e53935; /* red tone */
+	font-weight: 600; /* slightly bold */
+}
+
+.copy-email .copy-btn {
+	margin-left: 0.5rem;
+	padding: 0.1rem 0.4rem;
+	font-size: 0.85rem;
+	border: 1px solid #bbb;
+	background: #f7f7f7;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.copy-email .copy-btn:hover,
+.copy-email .copy-btn:focus {
+	background: #eee;
+}
+.copy-email .copy-status {
+	margin-left: 0.5rem;
+	font-size: 0.85rem;
+	color: #2e7d32; /* green */
 }
 
 @media screen and (max-width:990px) {
