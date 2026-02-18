@@ -24,8 +24,3 @@ googleAnalyticsID = "G-8SWN2ND23E"
 		name = "About"
 		url = "/about/"
 		weight = 3
-
-	[[menu.main]]
-		name = "Contact"
-		url = "/contact/"
-		weight = 4

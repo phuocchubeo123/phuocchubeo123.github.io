@@ -21,6 +21,7 @@ pre {
 main {
 	max-width: 50em;
 	margin: 0 auto;
+	padding-top: 4rem;
 }
 
 /* Global link styles: blue, no underline */
@@ -38,32 +39,64 @@ a:focus {
 
 /* Header navigation aligned with main content width */
 .site-header {
-	padding: 0.10rem 0; /* small, consistent spacing above content */
+	padding: 0.35rem 0 0.7rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: #e7edf7;
+	border-bottom: 1px solid #c7d2e5;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 .site-header .container {
 	max-width: 50em;
 	margin: 0 auto;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 1rem;
+}
+.site-header .site-title {
+	color: #111;
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1.1;
+	white-space: nowrap;
 }
 .site-header nav {
-	display: flex;
-	justify-content: flex-end; /* align links with the name's left edge on the upper line */
+	margin-left: auto;
 }
 .site-header nav ul {
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 0.2rem 0.45rem;
 	display: flex;
 	gap: 0.5rem;
+	background: #ffffff;
+	border: 1px solid #ccd5e5;
+	border-radius: 999px;
 }
 .site-header nav a {
 	text-decoration: none; /* color inherits from global link styles */
+	padding: 0.15rem 0.5rem;
+	border-radius: 999px;
+	display: inline-block;
+}
+.site-header nav a:hover,
+.site-header nav a:focus {
+	background: #eef3ff;
 }
 .site-header nav a.active {
 	text-decoration: none;
+	background: #dfeaff;
 }
 
 .links {
 	display:flex;
+	justify-content: center;
+	gap: 0.9rem;
+	margin-top: 0.35rem;
 }
 
 .title {
@@ -72,13 +105,13 @@ a:focus {
 	gap: 0.25rem;
 }
 
-/* Reduce the space between the nav and the name on the homepage */
-#my-name {
-	margin-top: 0; /* remove large default H1 top margin */
-}
-
-.links a {
-	margin: 0 1em 0 0;
+.links .scholar-icon,
+.links .github-icon,
+.links .email-icon {
+	width: 1.25rem;
+	height: 1.25rem;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .profile {
@@ -87,6 +120,42 @@ a:focus {
 
 .description {
 	display: flex;
+	align-items: flex-start;
+	gap: 1.25rem;
+}
+
+.links-summary {
+	margin-top: 1rem;
+}
+
+.profile-sidebar {
+	flex: 0 0 300px;
+	text-align: center;
+	position: sticky;
+	top: 6rem;
+	align-self: flex-start;
+}
+
+@media screen and (min-width:1400px) {
+	.profile-sidebar {
+		position: fixed;
+		left: max(0.75rem, calc((50% - 25em - 300px) / 2));
+		top: 6rem;
+	}
+}
+
+.profile-photo {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	object-position: center;
+	max-width: none;
+	max-height: none;
+	display: block;
+}
+
+.photo-caption {
+	color: #666;
 }
 
 
@@ -149,10 +218,18 @@ li {
 }
 
 @media screen and (max-width:990px) {
+	main {
+		padding-top: 5.9rem;
+	}
+
 	.about-me,.links-summary, .description {
 		flex-wrap: wrap;
 		flex-direction: column;
 		align-items: center;
+	}
+
+	.profile-sidebar {
+		position: static;
 	}
 
 	.links {
@@ -167,6 +244,15 @@ li {
 		flex-wrap: wrap;
 		flex-direction: column-reverse;
 		align-items: center;
+	}
+
+	.site-header .container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.site-header nav {
+		margin-left: 0;
 	}
 
 	img[src$='#right'] {

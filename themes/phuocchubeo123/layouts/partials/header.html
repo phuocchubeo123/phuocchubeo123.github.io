@@ -1,6 +1,7 @@
 {{/* Site header with main navigation */}}
 <div class="site-header">
 	<div class="container">
+		<a class="site-title" href="{{ "/" | relLangURL }}">{{ site.Title }}</a>
 		{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
 	</div>
  </div>
