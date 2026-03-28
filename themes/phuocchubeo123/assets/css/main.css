@@ -128,6 +128,28 @@ a:focus {
 	margin-top: 1rem;
 }
 
+.profile h3 {
+	margin: 1.6rem 0 0.55rem;
+	font-size: 1.18rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	line-height: 1.2;
+	text-transform: uppercase;
+	color: #5a7396;
+}
+
+.profile h3 + .section-panel {
+	margin-top: 0;
+}
+
+.about-panel {
+	padding: 1.15rem 1.2rem;
+}
+
+.about-panel p {
+	margin: 0;
+}
+
 .profile-sidebar {
 	flex: 0 0 300px;
 	text-align: center;
@@ -190,6 +212,85 @@ li {
 .paper-links .paper-venue:hover,
 .paper-links .paper-venue:focus {
 	color: #d81b60; /* keep same color in all states */
+}
+
+.section-panel {
+	margin: 0.5rem 0 1.25rem;
+	padding: 0.9rem 1rem;
+	background: linear-gradient(180deg, #f8fbff 0%, #edf3fb 100%);
+	border: 1px solid #c7d2e5;
+	border-left: 4px solid #6c8ebf;
+	border-radius: 12px;
+	box-shadow: 0 10px 24px rgba(72, 95, 128, 0.08);
+}
+
+.news-scroll {
+	max-height: 10rem;
+	overflow-y: auto;
+}
+
+.news-list {
+	margin: 0;
+	padding-left: 1.1rem;
+}
+
+.news-list li {
+	margin: 0;
+	padding: 0.55rem 0;
+}
+
+.news-list li + li {
+	border-top: 1px solid rgba(108, 142, 191, 0.22);
+}
+
+.news-scroll::-webkit-scrollbar {
+	width: 0.55rem;
+}
+
+.news-scroll::-webkit-scrollbar-track {
+	background: rgba(199, 210, 229, 0.4);
+	border-radius: 999px;
+}
+
+.news-scroll::-webkit-scrollbar-thumb {
+	background: rgba(108, 142, 191, 0.8);
+	border-radius: 999px;
+}
+
+.news-scroll::-webkit-scrollbar-thumb:hover {
+	background: rgba(86, 115, 160, 0.95);
+}
+
+.papers-panel {
+	padding-right: 1rem;
+}
+
+.papers-list {
+	margin: 0;
+	padding-left: 1.35rem;
+}
+
+.papers-list li {
+	margin: 0;
+	padding: 0.7rem 0;
+}
+
+.papers-list li + li {
+	border-top: 1px solid rgba(108, 142, 191, 0.22);
+}
+
+.section-list {
+	margin: 0;
+	padding-left: 1.35rem;
+}
+
+.section-list li {
+	margin: 0;
+	padding: 0.6rem 0;
+}
+
+.section-list li + li {
+	border-top: 1px solid rgba(108, 142, 191, 0.22);
 }
 
 /* Journal label styling: a bit more red */
