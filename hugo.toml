@@ -16,11 +16,11 @@ googleAnalyticsID = "G-8SWN2ND23E"
 		weight = 1
 
 	[[menu.main]]
-		name = "Posts"
-		url = "/posts/"
+		name = "Publications"
+		url = "/publications/"
 		weight = 2
 
 	[[menu.main]]
-		name = "About"
-		url = "/about/"
+		name = "Activities"
+		url = "/activities/"
 		weight = 3

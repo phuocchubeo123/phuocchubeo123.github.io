@@ -1,3 +1,7 @@
+html {
+	scrollbar-gutter: stable;
+}
+
 body {
 	color: #111;
 	background-color: #EEE;
@@ -158,13 +162,6 @@ a:focus {
 	align-self: flex-start;
 }
 
-@media screen and (min-width:1400px) {
-	.profile-sidebar {
-		position: fixed;
-		left: max(0.75rem, calc((50% - 25em - 300px) / 2));
-		top: 6rem;
-	}
-}
 
 .profile-photo {
 	width: 300px;
