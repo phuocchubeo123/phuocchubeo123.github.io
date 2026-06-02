@@ -14,8 +14,8 @@ weight = 20
 
 [module]
   [module.hugoVersion]
-    extended = false
-    min = "0.116.0"
+    extended = true
+    min = "0.152.2"
 
 [params]
 googleAnalyticsID = "G-8SWN2ND23E"
