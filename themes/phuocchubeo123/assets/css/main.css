@@ -358,3 +358,18 @@ li {
 		margin: 1em auto;
 	}
 }
+
+.papers-list::marker {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.paper-title {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.paper-authors {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400; /* normal */
+  font-size: 0.95em;
+  color: #555;
+}
