@@ -205,6 +205,10 @@ li {
 	color: #d81b60; /* dark pink */
 	font-weight: 600; /* slightly bold */
 }
+.paper-links .paper-code {
+	color:cadetblue;
+	font-weight: 600;
+}
 .paper-links .paper-venue:visited,
 .paper-links .paper-venue:hover,
 .paper-links .paper-venue:focus {
@@ -264,7 +268,14 @@ li {
 
 .papers-list {
 	margin: 0;
-	padding-left: 1.35rem;
+	padding-left: 0;
+	list-style: none;
+}
+
+/* Unnumbered preprints list (section-list is also used for bulleted <ul>s elsewhere) */
+ol.section-list {
+	padding-left: 0;
+	list-style: none;
 }
 
 .papers-list li {
